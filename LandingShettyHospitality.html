@@ -13,18 +13,16 @@
 
     <style>
         :root {
-            --primary-color: #89A080;
+            --primary: #89A080;
             --primary-dark: #6B8063;
             --heading-font: 'Playfair Display', serif;
             --body-font: 'Montserrat', sans-serif;
         }
         body { font-family: var(--body-font); }
         h1, h2, h3, h4, .font-heading { font-family: var(--heading-font); }
-        .bg-primary { background-color: var(--primary-color); }
-        .text-primary { color: var(--primary-color); }
-        
-        /* Ensures the header doesn't overlap content when scrolling to anchors */
-        section { scroll-margin-top: 5rem; }
+        .bg-primary { background-color: var(--primary); }
+        .text-primary { color: var(--primary); }
+        section { scroll-margin-top: 6rem; }
     </style>
 </head>
 <body class="bg-white text-gray-800">
@@ -41,208 +39,199 @@
                 </div>
 
                 <nav class="hidden lg:flex items-center space-x-8">
-                    <a href="#properties" class="text-white/90 hover:text-white transition font-medium text-sm">Our Properties</a>
-                    <a href="#about" class="text-white/90 hover:text-white transition font-medium text-sm">About Us</a>
-                    <a href="tel:+919876543210" class="text-white font-bold text-sm flex items-center">
+                    <a href="#properties" class="text-white/90 hover:text-white transition font-medium text-sm">Properties</a>
+                    <a href="#about" class="text-white/90 hover:text-white transition font-medium text-sm">Our Legacy</a>
+                    <a href="#contact" class="text-white font-bold text-sm flex items-center">
                         <i class="fa-solid fa-phone-volume mr-2 text-white/70"></i> +91 98765 43210
                     </a>
-                    <a href="#contact" class="bg-white text-primary px-5 py-2 rounded-md font-bold hover:bg-gray-100 transition text-sm">Book Now</a>
+                    <a href="#contact" class="bg-white text-primary px-5 py-2 rounded-md font-bold hover:bg-gray-100 transition text-sm">Check Availability</a>
                 </nav>
 
-                <button class="lg:hidden text-white p-2" onclick="toggleMobileMenu()">
+                <button class="lg:hidden text-white p-2" onclick="toggleMenu()">
                     <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
                 </button>
             </div>
         </div>
         
         <div id="mobile-menu" class="hidden lg:hidden bg-primary border-t border-white/10 px-4 py-6 space-y-4">
-            <a href="#properties" onclick="toggleMobileMenu()" class="block text-white text-lg">Our Properties</a>
-            <a href="#about" onclick="toggleMobileMenu()" class="block text-white text-lg">About Us</a>
-            <a href="tel:+919876543210" class="block text-white font-bold text-lg underline underline-offset-4 tracking-wider italic">+91 98765 43210</a>
-            <a href="#contact" onclick="toggleMobileMenu()" class="block text-center bg-white text-primary py-3 rounded-md font-bold">Inquire for Booking</a>
+            <a href="#properties" onclick="toggleMenu()" class="block text-white text-lg">Properties</a>
+            <a href="#about" onclick="toggleMenu()" class="block text-white text-lg">About Us</a>
+            <a href="tel:+919876543210" class="block text-white font-bold text-lg underline underline-offset-4">+91 98765 43210</a>
+            <a href="#contact" onclick="toggleMenu()" class="block text-center bg-white text-primary py-3 rounded-md font-bold">Book Now</a>
         </div>
     </header>
 
     <main>
-        <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <section id="hero" class="relative h-screen flex items-center justify-center">
             <div class="absolute inset-0 z-0">
                 <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/7d79c10b-2c16-4d9c-9fb8-da49ceb1fb00/publicContain" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-black/40"></div>
+                <div class="absolute inset-0 bg-black/50"></div>
             </div>
             <div class="relative z-10 max-w-7xl mx-auto px-6 text-center text-white">
-                <p class="text-primary font-bold tracking-[0.3em] uppercase mb-4">Welcome to the Orange City</p>
                 <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">35 Years of Curating Comfort in Nagpur</h1>
-                <p class="text-lg md:text-xl mb-10 opacity-90 max-w-2xl mx-auto">From 4-star luxury to curated boutique experiences—Shetty Hospitality defines the standard of Vidarbha's warmth.</p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#contact" class="bg-primary hover:bg-[#6B8063] px-8 py-4 rounded-md font-bold text-lg transition shadow-lg">Reserve a Room</a>
-                    <a href="#properties" class="border-2 border-white/50 hover:bg-white hover:text-black px-8 py-4 rounded-md font-bold text-lg transition">Explore Hotels</a>
+                <p class="text-lg md:text-xl mb-10 opacity-90 max-w-2xl mx-auto">From 4-star luxury to boutique lifestyle—experience Vidarbha's warmth at Shetty Hospitality.</p>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="#contact" class="bg-primary hover:bg-[#6B8063] px-8 py-4 rounded-md font-bold text-lg transition shadow-lg">Reserve Now</a>
+                    <a href="#properties" class="border-2 border-white/50 hover:bg-white hover:text-black px-8 py-4 rounded-md font-bold text-lg transition">Explore 4 Properties</a>
                 </div>
-            </div>
-        </section>
-
-        <section class="py-16 bg-primary text-white">
-            <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div><div class="text-4xl font-bold mb-2">35+</div><p class="text-sm uppercase tracking-widest opacity-80">Years Excellence</p></div>
-                <div><div class="text-4xl font-bold mb-2">4</div><p class="text-sm uppercase tracking-widest opacity-80">Premier Properties</p></div>
-                <div><div class="text-4xl font-bold mb-2">200+</div><p class="text-sm uppercase tracking-widest opacity-80">Luxury Rooms</p></div>
-                <div><div class="text-4xl font-bold mb-2">100k+</div><p class="text-sm uppercase tracking-widest opacity-80">Happy Guests</p></div>
             </div>
         </section>
 
         <section id="properties" class="py-24 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-5xl font-bold mb-4">Our Distinguished Portfolio</h2>
-                    <p class="text-gray-500 max-w-2xl mx-auto">Experience the finest hospitality across our four distinctive locations in Nagpur.</p>
-                </div>
-                <div class="grid md:grid-cols-2 gap-10">
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group">
-                        <div class="h-64 overflow-hidden relative">
-                            <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/f33fbd7f-67ef-4bb6-280f-b87193839d00/public" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                            <span class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-bold uppercase">4-Star Luxury</span>
-                        </div>
-                        <div class="p-8 text-center md:text-left">
-                            <h3 class="text-2xl font-bold mb-2">Hotel Pallet</h3>
-                            <p class="text-gray-500 mb-6 font-light">Fine dining, premium suites, and corporate hubs in central Nagpur (Ganga Kashi).</p>
-                            <a href="#contact" class="inline-block text-primary font-bold border-b-2 border-primary pb-1">Enquire for Booking &rarr;</a>
+            <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Discover Our Properties</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">Luxury, Comfort, Lifestyle, and Classic stays strategically located across Nagpur.</p>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-2 gap-10">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group border border-gray-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/f33fbd7f-67ef-4bb6-280f-b87193839d00/public" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <span class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-bold">4-STAR LUXURY</span>
+                        <span class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold">BEST SELLER</span>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-2">Hotel Pallet</h3>
+                        <p class="text-xs text-primary font-bold uppercase tracking-widest mb-4"><i class="fa-solid fa-location-dot"></i> Central Nagpur (Ganga Kashi)</p>
+                        <p class="text-gray-500 mb-6 font-light">Fine dining, premium suites, and corporate hubs. The crown jewel of our hospitality group.</p>
+                        <div class="flex justify-between items-center border-t pt-6">
+                            <span class="text-2xl font-bold text-gray-900">₹4,500<small class="text-gray-400 font-normal">/night</small></span>
+                            <a href="#contact" class="text-primary font-bold hover:underline">Book Now &rarr;</a>
                         </div>
                     </div>
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group">
-                        <div class="h-64 overflow-hidden relative">
-                            <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/fbd25895-33ba-4930-2973-fbfb1bf61e00/public" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                            <span class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-bold uppercase">3-Star Premium</span>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group border border-gray-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/fbd25895-33ba-4930-2973-fbfb1bf61e00/public" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <span class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-bold">3-STAR PREMIUM</span>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-2">Hotel Tiyana Inn</h3>
+                        <p class="text-xs text-primary font-bold uppercase tracking-widest mb-4"><i class="fa-solid fa-location-dot"></i> Central Park, Ramdaspeth</p>
+                        <p class="text-gray-500 mb-6 font-light">City views and boutique comfort. Perfectly located for those who want to be in the city center.</p>
+                        <div class="flex justify-between items-center border-t pt-6">
+                            <span class="text-2xl font-bold text-gray-900">₹2,800<small class="text-gray-400 font-normal">/night</small></span>
+                            <a href="#contact" class="text-primary font-bold hover:underline">Book Now &rarr;</a>
                         </div>
-                        <div class="p-8 text-center md:text-left">
-                            <h3 class="text-2xl font-bold mb-2">Hotel Tiyana Inn</h3>
-                            <p class="text-gray-500 mb-6 font-light">Boutique comfort and city views in the highly accessible Ramdaspeth area.</p>
-                            <a href="#contact" class="inline-block text-primary font-bold border-b-2 border-primary pb-1">Enquire for Booking &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group border border-gray-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/69e1c089-fd93-4852-be64-9bc1c61fa300/public" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <span class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-bold">3-STAR LIFESTYLE</span>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-2">Hotel Cafe 8</h3>
+                        <p class="text-xs text-primary font-bold uppercase tracking-widest mb-4"><i class="fa-solid fa-location-dot"></i> Hingna</p>
+                        <p class="text-gray-500 mb-6 font-light">Vibrant atmosphere, modern amenities, and transit-friendly. Ideal for the modern traveler.</p>
+                        <div class="flex justify-between items-center border-t pt-6">
+                            <span class="text-2xl font-bold text-gray-900">₹2,200<small class="text-gray-400 font-normal">/night</small></span>
+                            <a href="#contact" class="text-primary font-bold hover:underline">Book Now &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group border border-gray-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/44ed2933-5d32-4423-f62c-d78958d4be00/publicContain" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <span class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-bold">3-STAR CLASSIC</span>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-2">Hotel Satya</h3>
+                        <p class="text-xs text-primary font-bold uppercase tracking-widest mb-4"><i class="fa-solid fa-location-dot"></i> Kalmeshwar Road</p>
+                        <p class="text-gray-500 mb-6 font-light">Peaceful stay, banquet facilities, and reliable service. A classic choice for families and events.</p>
+                        <div class="flex justify-between items-center border-t pt-6">
+                            <span class="text-2xl font-bold text-gray-900">₹1,800<small class="text-gray-400 font-normal">/night</small></span>
+                            <a href="#contact" class="text-primary font-bold hover:underline">Book Now &rarr;</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="py-24 bg-white border-b border-gray-100">
+        <section id="about" class="py-24 bg-white">
             <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-3xl md:text-5xl font-bold mb-6">Our Legacy</h2>
-                    <p class="text-gray-600 text-lg leading-relaxed mb-6 italic font-light">"35 years of curating comfort in the heart of Nagpur."</p>
-                    <p class="text-gray-600 text-lg leading-relaxed mb-8">Founded by Shivaprasad Shetty, our hospitality group has been the trusted name for travelers in Vidarbha for decades. We specialize in blending modern amenities with traditional Indian warmth.</p>
-                    <a href="tel:+919876543210" class="inline-block bg-primary text-white px-6 py-3 rounded-md font-bold shadow-md">Talk to our Manager</a>
-                </div>
-                <div class="grid grid-cols-2 gap-4">
+                <div class="order-2 md:order-1 grid grid-cols-2 gap-4">
                     <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/ee9c41d5-3235-47c7-0cf2-7edd69b00700/public" class="rounded-xl h-64 w-full object-cover shadow-lg">
                     <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/56866f59-984a-4ecc-bf43-86d6c76da100/public" class="rounded-xl h-48 w-full object-cover mt-12 shadow-lg">
                 </div>
+                <div class="order-1 md:order-2">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Our Legacy of Service</h2>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">Under the leadership of General Manager Shivaprasad Shetty, we have defined the standard of comfort in Nagpur for over three decades.</p>
+                    <p class="text-gray-600 mb-8">Our group manages over 200 rooms, hosting over 100k+ happy guests who value our commitment to Vidarbha's warm hospitality.</p>
+                    <a href="tel:+919876543210" class="inline-block bg-primary text-white px-6 py-3 rounded-md font-bold shadow-md">Talk to our Manager</a>
+                </div>
             </div>
         </section>
 
-        <section id="contact" class="py-20 bg-gray-50">
+        <section id="contact" class="py-20 bg-gray-50 border-t border-gray-100">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="grid lg:grid-cols-2 gap-16">
-                    
                     <div>
-                        <p class="text-primary font-bold tracking-widest uppercase text-sm mb-2">Get In Touch</p>
+                        <p class="text-primary font-bold uppercase text-sm mb-2">Connect With Us</p>
                         <h2 class="text-3xl md:text-4xl font-bold mb-6">Reservation Desk</h2>
-                        <p class="text-gray-600 mb-8 leading-relaxed">Reach out directly for corporate bookings, group stays, or special event pricing at any of our Nagpur properties.</p>
-                        
-                        <div class="space-y-8">
-                            <div class="flex items-start space-x-4 group">
-                                <div class="bg-primary/10 p-4 rounded-full text-primary group-hover:bg-primary group-hover:text-white transition shadow-sm">
-                                    <i class="fa-solid fa-phone text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-500 uppercase text-xs mb-1">Call Us Directly</h4>
-                                    <a href="tel:+919876543210" class="text-xl font-bold text-gray-800 hover:text-primary transition">+91 98765 43210</a>
-                                </div>
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-primary/10 p-4 rounded-full text-primary"><i class="fa-solid fa-phone"></i></div>
+                                <div><h4 class="font-bold">Call Now</h4><a href="tel:+919876543210" class="text-xl font-bold">+91 98765 43210</a></div>
                             </div>
-
-                            <div class="flex items-start space-x-4 group">
-                                <div class="bg-primary/10 p-4 rounded-full text-primary group-hover:bg-primary group-hover:text-white transition shadow-sm">
-                                    <i class="fa-solid fa-envelope text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-500 uppercase text-xs mb-1">Email Reservations</h4>
-                                    <a href="mailto:Palletecompanyserviced@gmail.com" class="text-gray-800 hover:text-primary transition break-words">Palletecompanyserviced@gmail.com</a>
-                                </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-primary/10 p-4 rounded-full text-primary"><i class="fa-solid fa-envelope"></i></div>
+                                <div><h4 class="font-bold">Email Reservations</h4><a href="mailto:Palletecompanyserviced@gmail.com" class="text-gray-600 break-words">Palletecompanyserviced@gmail.com</a></div>
                             </div>
-
-                            <div class="flex items-start space-x-4 group">
-                                <div class="bg-primary/10 p-4 rounded-full text-primary group-hover:bg-primary group-hover:text-white transition shadow-sm">
-                                    <i class="fa-solid fa-location-dot text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-500 uppercase text-xs mb-1">Visit Office</h4>
-                                    <p class="text-gray-800 leading-tight">312, Nit Parking Plaza, Sitabuldi,<br>Nagpur, MH - 440012</p>
-                                </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-primary/10 p-4 rounded-full text-primary"><i class="fa-solid fa-location-dot"></i></div>
+                                <div><h4 class="font-bold">Head Office</h4><p class="text-gray-600">312, Nit Parking Plaza, Sitabuldi, Nagpur</p></div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100 relative">
-                        <h3 class="text-2xl font-bold mb-6 border-b pb-4">Booking Enquiry</h3>
-                        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="space-y-6">
-                            <div class="grid md:grid-cols-2 gap-6">
-                                <div>
-                                    <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Full Name</label>
-                                    <input type="text" name="name" required placeholder="John Doe" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary outline-none bg-gray-50 transition">
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Phone Number</label>
-                                    <input type="tel" name="phone" required placeholder="+91" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary outline-none bg-gray-50 transition">
-                                </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+                        <h3 class="text-2xl font-bold mb-6">Booking Enquiry</h3>
+                        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="space-y-4">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <input type="text" name="name" placeholder="Full Name" required class="w-full px-4 py-3 border rounded-lg outline-none bg-gray-50">
+                                <input type="tel" name="phone" placeholder="Phone Number" required class="w-full px-4 py-3 border rounded-lg outline-none bg-gray-50">
                             </div>
-                            
-                            <div>
-                                <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Select Property</label>
-                                <select name="property" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary outline-none bg-gray-50 cursor-pointer">
-                                    <option value="Hotel Pallet">Hotel Pallet (4-Star)</option>
-                                    <option value="Hotel Tiyana Inn">Hotel Tiyana Inn</option>
-                                    <option value="Hotel Cafe 8">Hotel Cafe 8</option>
-                                    <option value="Hotel Satya">Hotel Satya</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Message / Requirements</label>
-                                <textarea name="message" rows="4" required class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary outline-none bg-gray-50" placeholder="Number of guests, check-in dates, etc..."></textarea>
-                            </div>
-
-                            <button type="submit" class="w-full bg-primary text-white font-bold py-4 rounded-lg hover:bg-primary-dark transition-all transform hover:scale-[1.01] shadow-lg">
-                                Send Enquiry Now
-                            </button>
+                            <select name="property" class="w-full px-4 py-3 border rounded-lg outline-none bg-gray-50">
+                                <option value="Hotel Pallet">Hotel Pallet (4-Star)</option>
+                                <option value="Hotel Tiyana Inn">Hotel Tiyana Inn (Premium)</option>
+                                <option value="Hotel Cafe 8">Hotel Cafe 8 (Lifestyle)</option>
+                                <option value="Hotel Satya">Hotel Satya (Classic)</option>
+                            </select>
+                            <textarea name="message" rows="4" placeholder="Check-in Date, Number of Guests..." class="w-full px-4 py-3 border rounded-lg outline-none bg-gray-50"></textarea>
+                            <button type="submit" class="w-full bg-primary text-white font-bold py-4 rounded-lg hover:bg-primary-dark transition shadow-lg">Submit Request</button>
                         </form>
                     </div>
-
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="bg-gray-900 text-white pt-20 pb-10">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 border-b border-white/5 pb-12">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 border-b border-white/5 pb-12 text-center md:text-left">
             <div class="col-span-1 md:col-span-2">
-                <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/fb7effa3-6189-402d-c85a-5eecbd092900/public" class="h-16 mb-6">
-                <p class="max-w-xs text-gray-400 italic font-light">"35 years of excellence in hospitality. Your comfort is our legacy. Experience Vidarbha's warmth at Shetty Hospitality."</p>
-                <p class="mt-4 text-xs uppercase tracking-widest text-primary font-bold">Managed by Shivaprasad Shetty</p>
+                <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/fb7effa3-6189-402d-c85a-5eecbd092900/public" class="h-14 mb-6 mx-auto md:mx-0">
+                <p class="text-gray-400 italic">"35 years of curating comfort in Nagpur. Your comfort is our legacy."</p>
+                <p class="mt-4 text-xs font-bold text-primary tracking-widest uppercase">Shivaprasad Shetty • General Manager</p>
             </div>
             <div>
-                <h4 class="font-bold text-lg mb-6">Quick Nav</h4>
+                <h4 class="font-bold text-lg mb-6">Quick Links</h4>
                 <ul class="space-y-3 text-gray-400">
                     <li><a href="#hero" class="hover:text-primary transition">Home</a></li>
-                    <li><a href="#properties" class="hover:text-primary transition">Properties</a></li>
-                    <li><a href="#about" class="hover:text-primary transition">Our Story</a></li>
-                    <li><a href="#contact" class="hover:text-primary transition">Reservations</a></li>
+                    <li><a href="#properties" class="hover:text-primary transition">Our Hotels</a></li>
+                    <li><a href="#about" class="hover:text-primary transition">About Us</a></li>
+                    <li><a href="#contact" class="hover:text-primary transition">Contact</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-bold text-lg mb-6">24/7 Support</h4>
-                <p class="text-gray-400 mb-4 text-sm">312, Nit Parking Plaza, Sitabuldi, Nagpur</p>
-                <a href="tel:+919876543210" class="block font-bold text-xl text-primary mb-4 underline decoration-white/20 underline-offset-4">+91 98765 43210</a>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-xl text-gray-500 hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="text-xl text-gray-500 hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" class="text-xl text-gray-500 hover:text-white transition"><i class="fa-brands fa-linkedin"></i></a>
+                <h4 class="font-bold text-lg mb-6">Bookings</h4>
+                <a href="tel:+919876543210" class="block font-bold text-xl text-primary mb-4">+91 98765 43210</a>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="#" class="text-gray-500 hover:text-white"><i class="fa-brands fa-instagram text-xl"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-white"><i class="fa-brands fa-facebook text-xl"></i></a>
                 </div>
             </div>
         </div>
@@ -250,10 +239,9 @@
     </footer>
 
     <script>
-        function toggleMobileMenu() {
+        function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
             const icon = document.getElementById('menu-icon');
-            
             if (menu.classList.contains('hidden')) {
                 menu.classList.remove('hidden');
                 icon.classList.replace('fa-bars', 'fa-xmark');
@@ -262,14 +250,6 @@
                 icon.classList.replace('fa-xmark', 'fa-bars');
             }
         }
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('mobile-menu').classList.add('hidden');
-                document.getElementById('menu-icon').classList.replace('fa-xmark', 'fa-bars');
-            });
-        });
     </script>
 </body>
 </html>
